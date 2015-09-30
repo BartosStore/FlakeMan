@@ -10,14 +10,25 @@
     </h:head>
 
     <h:body>
-        <div id="header">Template header</div>
+        <div id="tmpl_header">
+            <div id="logo">
+                
+            </div>
+            <div id="menu-box">
+                <ul id="menu">
+                    <li><a href="index.xhtml" id="first">Home</a></li>
+                    <li><a href="chart.xhtml">Graph</a></li>
+                    <li><a href="contact.xhtml">Contact</a></li>
+                </ul>
+            </div>
+        </div>
 
-        <div id="content">
+        <div id="tmpl_content">
             <h1><ui:insert name="header"></ui:insert></h1>
             <ui:insert name="content"></ui:insert>
         </div>
 
-        <div id="footer">Template footer</div>
+        <div id="tmpl_footer">Template footer</div>
     </h:body>
 
 </html>
