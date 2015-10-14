@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
 
     <h:head>
         <title>Template ttl</title>
@@ -10,6 +11,7 @@
     </h:head>
 
     <h:body>
+        <p:growl id="growl" showSummary="true" showDetail="true" sticky="false" />
         <div id="tmpl_header">
             <div id="logo">
                 
@@ -18,7 +20,7 @@
                 <ul id="menu">
                     <li><a href="index.xhtml" id="first">Home</a></li>
                     <li><a href="chart.xhtml">Graph</a></li>
-                    <li><a href="contact.xhtml">Contact</a></li>
+                    <li><a href="form.xhtml">Form</a></li>
                 </ul>
             </div>
         </div>

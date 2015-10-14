@@ -7,17 +7,16 @@ package cz.bartos.flakeman.beans;
 
 import cz.bartos.flakeman.service.WeatherService;
 import java.io.Serializable;
-import javax.annotation.PostConstruct;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
+import javax.inject.Named;
 
 /**
  *
  * @author miba
  */
-@ManagedBean
-@SessionScoped
+@Named
+@ViewScoped
 public class WeatherBean implements Serializable {
 
     private int airTemp = (int) 15.0;
@@ -25,7 +24,7 @@ public class WeatherBean implements Serializable {
     private String forecast;
     @Inject
     private WeatherService weatherService;
-    
+
     public int getAirTemp() {
         return airTemp;
     }
@@ -49,5 +48,5 @@ public class WeatherBean implements Serializable {
     public void setForecast(String forecast) {
         this.forecast = forecast;
     }
-    
+
 }
