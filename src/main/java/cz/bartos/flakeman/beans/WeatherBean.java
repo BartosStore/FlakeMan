@@ -5,7 +5,7 @@
  */
 package cz.bartos.flakeman.beans;
 
-import cz.bartos.flakeman.service.WeatherService;
+import cz.bartos.flakeman.REST.JsonService;
 import java.io.Serializable;
 import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
@@ -22,8 +22,14 @@ public class WeatherBean implements Serializable {
     private int airTemp = (int) 15.0;
     private int roomTemp = (int) 22.0;
     private String forecast;
+    private String city = "valdice";
+
     @Inject
-    private WeatherService weatherService;
+    private JsonService jsonService;
+
+    public void checkWeather() {
+        forecast = jsonService.getWeatherResponse(city);
+    }
 
     public int getAirTemp() {
         return airTemp;
@@ -42,11 +48,18 @@ public class WeatherBean implements Serializable {
     }
 
     public String getForecast() {
-        return weatherService.getWeatherInfo();
+        return forecast;
     }
 
     public void setForecast(String forecast) {
         this.forecast = forecast;
     }
 
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
 }

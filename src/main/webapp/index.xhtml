@@ -13,10 +13,14 @@
                 <h:outputText value="Teplota vzduchu:" style="font-size: x-large" />
                 <h:outputText value="#{weatherBean.airTemp}" />
                 <br />
+                <h:outputText value="Mesto:" style="font-size: x-large" />
+                <h:inputText value="#{weatherBean.city}" />
+                <h:commandButton value="Posli" action="#{weatherBean.checkWeather}" />
+                <br />
                 <h:outputText value="Předpověď:" style="font-size: x-large" />
                 <h:outputText value="#{weatherBean.forecast}" style="white-space: pre-wrap" />
             </h:form>
-        
+
         </ui:define>
     </ui:composition>
 
